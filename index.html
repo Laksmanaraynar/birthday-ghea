@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#ffd9e8"
+    >
+
+    <title>For Ghea 💗</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         MUSIC
+    ====================================== -->
+
+    <audio
+        id="music"
+        src="assets/music/lagu-romantis.mp3"
+        loop
+    ></audio>
+
+
+    <button
+        id="musicBtn"
+        class="music-btn"
+        onclick="toggleMusic()"
+        aria-label="Musik"
+    >
+        🎵
+    </button>
+
+
+    <!-- =====================================
+         FLOATING DECORATION CONTAINER
+    ====================================== -->
+
+    <div id="decorations"></div>
+
+
+    <!-- =====================================
+         01. OPENING
+    ====================================== -->
+
+    <section
+        id="opening"
+        class="screen opening-screen"
+    >
+
+        <div class="stars">
+            ✦ ✧ ✦ ✧ ✦
+        </div>
+
+
+        <div class="gift-box">
+            🎁
+        </div>
+
+
+        <p class="tiny-text">
+            A LITTLE SURPRISE FOR
+        </p>
+
+
+        <h1>
+            SAYANGGKUUU <br>
+            💗
+        </h1>
+
+
+        <p class="sub-text">
+            Ada sesuatu kecil yang aku siapkan
+            khusus buat kamu dan semoga kamu suka, hehe.
+        </p>
+
+
+        <button
+            class="primary-btn"
+            onclick="openGift()"
+        >
+            Buka Hadiahnya 🎀
+        </button>
+
+
+        <p class="bottom-text">
+            dibuat dengan banyak cinta 💗
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         02. BIRTHDAY SURPRISE
+    ====================================== -->
+
+    <section
+        id="surprise"
+        class="screen surprise-screen hidden"
+    >
+
+        <div class="confetti-title">
+            🎉 🎊 🎉
+        </div>
+
+
+        <p class="tiny-text">
+            TODAY IS YOUR SPECIAL DAY
+        </p>
+
+
+        <h1>
+            HAPPY<br>
+            <span>BIRTHDAY</span>
+        </h1>
+
+
+        <h2>
+            SAYANGGKUUU! 💗
+        </h2>
+
+
+        <div class="cake-container">
+
+            <div class="candles">
+                🕯️ 🕯️ 🕯️
+            </div>
+
+            <div class="cake">
+                🎂
+            </div>
+
+        </div>
+
+
+        <p class="birthday-text">
+
+            Selamat ulang tahun untuk
+            seseorang yang berhasil membuat
+            hari-hariku jadi lebih
+            berwarna. 💗
+
+            <br><br>
+
+            Semoga hari-hari kamu penuh dengan
+            hal-hal yang bikin kamu senyum
+            sampai lupa waktu. ✨
+
+        </p>
+
+
+        <button
+            class="primary-btn"
+            onclick="goTo('candle')"
+        >
+            Ada satu hal lagi... 👀
+        </button>
+
+    </section>
+
+
+
+    <!-- =====================================
+         03. CANDLE
+    ====================================== -->
+
+    <section
+        id="candle"
+        class="screen candle-screen hidden"
+    >
+
+        <div class="candle-card">
+
+            <div class="candle-cake">
+                🎂
+            </div>
+
+
+            <h1>
+                Make a Wish ✨
+            </h1>
+
+
+            <p>
+
+                Pejamkan mata sebentar...
+
+                <br>
+
+                pikirkan satu harapan
+                yang paling kamu inginkan.
+
+                <br><br>
+
+                lalu...
+
+            </p>
+
+
+            <div
+                class="wish-candle"
+                id="wishCandle"
+            >
+                🕯️
+            </div>
+
+
+            <button
+                class="primary-btn"
+                onclick="blowCandle()"
+            >
+                Tiup Lilinnya, Sayang 💨
+            </button>
+
+
+            <div id="wishMessage"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         04. LETTER
+    ====================================== -->
+
+    <section
+        id="letter"
+        class="screen letter-screen hidden"
+    >
+
+        <div class="letter-envelope">
+            💌
+        </div>
+
+
+        <h1>
+            Untuk SAYANGKUUU...
+        </h1>
+
+
+        <div class="letter">
+
+            <p>
+                Hai Ghea,
+            </p>
+
+
+            <p>
+
+                Selamat ulang tahun, sayang. 🎂
+
+                <br>
+
+                Walaupun tanggal 8 Agustus
+                kemarin udah lewat,
+                bukan berarti aku jadi
+                nggak boleh ngucapin lagi,
+                kan? huhu
+
+            </p>
+
+
+            <p>
+
+                Aku cuma mau bilang,
+                terima kasih karena sudah
+                menjadi salah satu bagian
+                yang membuat hidupku
+                terasa lebih menyenangkan.
+
+            </p>
+
+
+            <p>
+
+                Aku mungkin nggak selalu
+                pandai menyampaikan apa
+                yang aku rasakan.
+
+                Kadang malah lebih sering
+                bercanda, ngeselin,
+                atau bikin kamu kesel dan sedih, Maaf yaa sayang. :( 
+
+            </p>
+
+
+            <p>
+
+                Tapi di balik itu semua,
+                aku benar-benar berharap
+                kamu selalu dikelilingi
+                hal-hal baik.
+
+                Semoga kamu selalu sehat,
+                bahagia selalu, dimudahkan
+                dalam mengejar apa yang
+                kamu impikan, dan selalu
+                punya alasan untuk tersenyum.
+
+            </p>
+
+
+            <p>
+
+                Dan semoga di umur yang baru
+                ini, ada lebih banyak
+                cerita indah yang bisa
+                kita buat bersama.
+
+            </p>
+
+
+            <p>
+
+                Sekali lagi...
+
+                <br>
+
+                <strong>
+                    Happy Birthday, Sayangku 💗
+                    LOVEEE UUUU MOREE, CANTIKK!!
+                </strong>
+
+            </p>
+
+
+            <p class="signature">
+
+                — Laksmana 💙
+
+            </p>
+
+        </div>
+
+
+        <button
+    class="primary-btn"
+    onclick="goTo('memories')"
+>
+    Lihat sedikit kenangan kita 📸
+</button>
+
+    </section>
+
+    <!-- =====================================
+     05. MEMORIES
+====================================== -->
+
+<section
+    id="memories"
+    class="screen memories-screen hidden"
+>
+
+    <div class="memories-sparkle">
+        ✨ 💗 ✨
+    </div>
+
+    <p class="tiny-text">
+        A FEW LITTLE MEMORIES
+    </p>
+
+    <h1>
+        Our Little<br>
+        <span>Memories</span> 💗
+    </h1>
+
+    <p class="memories-intro">
+        Beberapa momen kecil yang mungkin
+        sederhana...
+        tapi tetap punya tempat spesial di hatiku.
+    </p>
+
+
+    <!-- FOTO GHEA -->
+
+    <div class="memory-card">
+
+        <div class="memory-photo">
+
+            <img
+                src="assets/images/ghea1.jpeg"
+                alt="Ghea dengan buket bunga"
+            >
+
+        </div>
+
+        <div class="memory-content">
+
+            <span class="memory-number">
+                01
+            </span>
+
+            <h2>
+                Pretty Ghea 🌷
+            </h2>
+
+            <p>
+                Entah kenapa, setiap kali
+                lihat foto ini aku selalu
+                kepikiran satu hal...
+            </p>
+
+            <strong>
+                "Kok bisa ya ada orang
+                secantik ini?" 😌
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOTO KALIAN -->
+
+    <div class="memory-card reverse-card">
+
+        <div class="memory-photo">
+
+            <img
+                src="assets/images/ghea2.jpeg"
+                alt="Foto bersama Ghea"
+            >
+
+        </div>
+
+        <div class="memory-content">
+
+            <span class="memory-number">
+                02
+            </span>
+
+            <h2>
+                Us 💙
+            </h2>
+
+            <p>
+                Dan kalau foto pertama
+                adalah tentang kamu...
+            </p>
+
+            <p>
+                foto yang ini adalah tentang
+                salah satu cerita kecil yang
+                berhasil kita punya bersama.
+            </p>
+
+            <strong>
+                Semoga masih banyak
+                cerita setelah ini. 💗
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="memory-ending">
+
+        <div>
+            💗 💙 💛
+        </div>
+
+        <p>
+            Little moments,
+            big memories.
+        </p>
+
+    </div>
+
+
+    <button
+        class="primary-btn"
+        onclick="goTo('wait')"
+    >
+        Masih ada satu lagi... 👀
+    </button>
+
+</section>
+
+
+
+    <!-- =====================================
+         05. WAIT / SECOND SURPRISE
+    ====================================== -->
+
+    <section
+        id="wait"
+        class="screen wait-screen hidden"
+    >
+
+        <div class="wait-emoji">
+            👀
+        </div>
+
+
+        <p class="tiny-text">
+            WAIT...
+        </p>
+
+
+        <h1>
+            Eh, tunggu...
+        </h1>
+
+
+        <p>
+
+            Kamu kira udah selesai?
+
+            <br><br>
+
+            <strong>
+                Belum. 😌
+            </strong>
+
+        </p>
+
+
+        <div class="loading-heart">
+            💗
+        </div>
+
+
+        <button
+            class="primary-btn"
+            onclick="showSecondSurprise()"
+        >
+            Masih ada satu lagi 🎁
+        </button>
+
+    </section>
+
+
+
+    <!-- =====================================
+         06. SECOND SURPRISE
+    ====================================== -->
+
+    <section
+        id="second"
+        class="screen second-screen hidden"
+    >
+
+        <div class="second-stars">
+            ✨ ✨ ✨
+        </div>
+
+
+        <div class="big-heart">
+            💗
+        </div>
+
+
+        <h1>
+            Satu hal lagi...
+        </h1>
+
+
+        <div class="second-card">
+
+            <p>
+
+                Dari sekian banyak
+                hal yang bisa aku tulis
+                di web kecil-kecilan ini...
+
+            </p>
+
+
+            <p>
+
+                aku cuma ingin kamu tahu
+                kalau aku seneng bangett bisa
+                kenal dan bahkan menjalin hubungan dengan kamu.
+
+            </p>
+
+
+            <p>
+
+                Semoga kita masih punya
+                banyak kesempatan untuk
+                membuat cerita-cerita
+                kecil yang suatu hari nanti
+                bisa kita lihat kembali
+                sambil tersenyum.
+
+            </p>
+
+
+            <div class="color-hearts">
+                💗 💙 💛
+            </div>
+
+
+            <p class="special-line">
+
+                Keep being you, Ghea.
+
+            </p>
+
+        </div>
+
+
+        <button
+            class="primary-btn"
+            onclick="goTo('final')"
+        >
+            Satu pesan terakhir... ✨
+        </button>
+
+    </section>
+
+
+
+    <!-- =====================================
+         07. FINAL
+    ====================================== -->
+
+    <section
+        id="final"
+        class="screen final-screen hidden"
+    >
+
+        <div class="final-stars">
+            ✨ ✦ ✧ ✦ ✨
+        </div>
+
+
+        <div class="final-heart">
+            💗
+        </div>
+
+
+        <p class="tiny-text">
+            FOR THE GIRL WHO DESERVES
+        </p>
+
+
+        <h1>
+
+            HAPPY<br>
+
+            <span>
+                BIRTHDAY
+            </span>
+
+            <br>
+
+            GHEA.
+
+        </h1>
+
+
+        <div class="final-colors">
+            💗 💙 💛
+        </div>
+
+
+        <p class="final-message">
+
+            Semoga umur yang baru ini
+            membawa lebih banyak
+            kebahagiaan, kesempatan,
+            pengalaman baru, dan
+            orang-orang baik di sekitarmu.
+
+            <br><br>
+
+            Jangan lupa selalu bahagia ya sayangg, apalagi sekarang sudah ada aku lagii, hehe.
+
+            <br>
+
+            Karena aku juga pasti ikut bahagia kalau pacarku bahagia :)
+
+        </p>
+
+
+        <p class="closing">
+            See you in the next chapter, sayang. ✨
+        </p>
+
+
+        <small>
+            Website kecil ini dibuat
+            khusus untuk Ghea Agustina Sarwoto
+            dengan banyak cinta. 💗
+        </small>
+
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

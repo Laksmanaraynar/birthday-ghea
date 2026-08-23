@@ -1,0 +1,1898 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    color: #554551;
+
+    overflow-x: hidden;
+
+    background: #fff7fb;
+}
+
+
+/* =========================================
+   SCREEN
+========================================= */
+
+.screen {
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    padding:
+        35px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation:
+        screenIn .8s ease;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.screen::before,
+.screen::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    filter: blur(5px);
+
+    opacity: .35;
+
+    pointer-events: none;
+
+}
+
+
+.screen::before {
+
+    background: #ffb8d6;
+
+    top: -80px;
+
+    left: -80px;
+
+    animation:
+        bubbleMove 8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.screen::after {
+
+    background: #9bdcff;
+
+    right: -80px;
+
+    bottom: -80px;
+
+    animation:
+        bubbleMove 10s
+        ease-in-out
+        infinite
+        reverse;
+
+}
+
+
+/* =========================================
+   OPENING
+========================================= */
+
+.opening-screen {
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            #ffd2e4,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #c9edff,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff1f7,
+            #fffbe0
+        );
+
+}
+
+
+.stars {
+
+    font-size: 23px;
+
+    color: #e889b2;
+
+    margin-bottom: 25px;
+
+    animation:
+        sparkle 2s
+        ease-in-out
+        infinite;
+
+}
+
+
+.gift-box {
+
+    font-size: 90px;
+
+    margin-bottom: 15px;
+
+    animation:
+        giftFloat 2s
+        ease-in-out
+        infinite;
+
+}
+
+
+.tiny-text {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color: #dc6d9f;
+
+    margin-bottom: 15px;
+
+}
+
+
+.opening-screen h1 {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 43px;
+
+    line-height: .9;
+
+    color: #e86fa6;
+
+    margin-bottom: 20px;
+
+    animation:
+        textFloat 3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.sub-text {
+
+    font-size: 13px;
+
+    color: #777;
+
+    line-height: 1.7;
+
+    max-width: 300px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.bottom-text {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    font-size: 10px;
+
+    color: #aaa;
+
+    animation:
+        fadePulse 2s infinite;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.primary-btn {
+
+    width: 100%;
+
+    max-width: 290px;
+
+    min-height: 52px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 13px 20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff91bd,
+            #72c7f5
+        );
+
+    color: white;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 30px
+        rgba(230,100,160,.25);
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 20;
+
+    animation:
+        buttonFloat 2.5s
+        ease-in-out
+        infinite;
+
+    transition: .2s;
+
+}
+
+
+.primary-btn:active {
+
+    transform:
+        scale(.94);
+
+}
+
+
+/* =========================================
+   SURPRISE
+========================================= */
+
+.surprise-screen {
+
+    background:
+
+        radial-gradient(
+            circle at 15% 15%,
+            #ffd1e5,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            #bfe7ff,
+            transparent 30%
+        ),
+
+        #fff8d9;
+
+}
+
+
+.confetti-title {
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+    animation:
+        titleBounce 2s
+        ease-in-out
+        infinite;
+
+}
+
+
+.surprise-screen h1 {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 65px;
+
+    line-height: .75;
+
+    color: #ef73a9;
+
+    text-shadow:
+        3px 3px white;
+
+    animation:
+        titleFloat 3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.surprise-screen h1 span {
+    color: #5bb7ed;
+}
+
+
+.surprise-screen h2 {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 42px;
+
+    color: #e9aa18;
+
+    margin-top: 15px;
+
+    animation:
+        namePulse 2s
+        infinite;
+
+}
+
+
+.cake-container {
+
+    margin: 25px 0;
+
+    position: relative;
+
+    animation:
+        cakeFloat 2s
+        ease-in-out
+        infinite;
+
+}
+
+
+.cake {
+
+    font-size: 82px;
+
+    animation:
+        cakeWiggle 3s
+        infinite;
+
+}
+
+
+.candles {
+
+    font-size: 22px;
+
+    position: absolute;
+
+    top: -10px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    animation:
+        candleFlicker .7s
+        infinite
+        alternate;
+
+}
+
+
+.birthday-text {
+
+    width: 100%;
+
+    max-width: 330px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #6b5c68;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+   CANDLE
+========================================= */
+
+.candle-screen {
+
+    background:
+
+        linear-gradient(
+            160deg,
+            #fff0f8,
+            #eef8ff
+        );
+
+}
+
+
+.candle-card {
+
+    width: 100%;
+
+    max-width: 380px;
+
+    padding: 40px 24px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.88);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.08);
+
+    backdrop-filter:
+        blur(15px);
+
+    animation:
+        cardFloat 4s
+        ease-in-out
+        infinite;
+
+}
+
+
+.candle-cake {
+
+    font-size: 70px;
+
+    animation:
+        cakeWiggle 3s
+        infinite;
+
+}
+
+
+.candle-card h1 {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 40px;
+
+    color: #e972a8;
+
+    margin: 10px 0;
+
+}
+
+
+.candle-card p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #777;
+
+}
+
+
+.wish-candle {
+
+    font-size: 70px;
+
+    margin: 25px 0;
+
+    animation:
+        candleFloat 1.5s
+        infinite;
+
+}
+
+
+#wishMessage {
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================================
+   LETTER
+========================================= */
+
+.letter-screen {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #fff1f7,
+            #fffbe2
+        );
+
+    justify-content:
+        flex-start;
+
+    padding-top: 65px;
+
+}
+
+
+.letter-envelope {
+
+    font-size: 55px;
+
+    animation:
+        envelopeFloat 2s
+        ease-in-out
+        infinite;
+
+}
+
+
+.letter-screen h1 {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 42px;
+
+    color: #e970a7;
+
+    margin: 10px 0 25px;
+
+}
+
+
+.letter {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    line-height: 1.85;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.07);
+
+    position: relative;
+
+    margin-bottom: 25px;
+
+    animation:
+        letterFloat 4s
+        ease-in-out
+        infinite;
+
+}
+
+
+.letter::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border:
+        2px dashed
+        #ffc7dc;
+
+    border-radius: 12px;
+
+    pointer-events: none;
+
+}
+
+
+.letter p {
+
+    margin-bottom: 16px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.letter strong {
+
+    color: #e66e9f;
+
+}
+
+
+.signature {
+
+    text-align: right;
+
+    color: #e66e9f;
+
+    font-weight: 600;
+
+}
+/* =========================================
+   MEMORIES
+========================================= */
+
+.memories-screen {
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            #ffd5e7,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            #c9edff,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            145deg,
+            #fff7fb,
+            #fffbe7
+        );
+
+    justify-content: flex-start;
+
+    padding-top: 55px;
+
+    padding-bottom: 55px;
+
+}
+
+
+.memories-sparkle {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+    animation:
+        sparkle 2s
+        ease-in-out
+        infinite;
+
+}
+
+
+.memories-screen h1 {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 43px;
+
+    line-height: .9;
+
+    color: #e76fa5;
+
+    margin-bottom: 15px;
+
+}
+
+
+.memories-screen h1 span {
+
+    color: #55b5e7;
+
+}
+
+
+.memories-intro {
+
+    max-width: 310px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #777;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================
+   MEMORY CARD
+========================================= */
+
+.memory-card {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    margin-bottom: 28px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,.09);
+
+    transform:
+        rotate(-1deg);
+
+    animation:
+        memoryFloat 5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.memory-card:nth-of-type(2) {
+
+    transform:
+        rotate(1deg);
+
+    animation-delay:
+        .7s;
+
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.memory-photo {
+
+    width: 100%;
+
+    background: #f6e7ee;
+
+    overflow: hidden;
+
+}
+
+
+.memory-photo img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 520px;
+
+    object-fit: contain;
+
+    transition:
+        transform .6s
+        ease;
+
+}
+
+
+.memory-card:active
+.memory-photo img {
+
+    transform:
+        scale(1.03);
+
+}
+
+
+/* =========================================
+   MEMORY CONTENT
+========================================= */
+
+.memory-content {
+
+    padding:
+        22px 22px 25px;
+
+    text-align: left;
+
+}
+
+
+.memory-number {
+
+    display: inline-block;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #dc78a4;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+}
+
+
+.memory-content h2 {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 28px;
+
+    color: #e46f9f;
+
+    margin-bottom: 8px;
+
+}
+
+
+.memory-content p {
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #777;
+
+    margin-bottom: 8px;
+
+}
+
+
+.memory-content strong {
+
+    display: block;
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+
+    color: #55aedd;
+
+}
+
+
+/* =========================================
+   MEMORY END
+========================================= */
+
+.memory-ending {
+
+    margin:
+        5px 0 25px;
+
+    text-align: center;
+
+}
+
+
+.memory-ending div {
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+
+    animation:
+        colorBounce 2s
+        infinite;
+
+}
+
+
+.memory-ending p {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 19px;
+
+    color: #d979a3;
+
+}
+
+
+/* =========================================
+   MEMORY ANIMATION
+========================================= */
+
+@keyframes memoryFloat {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(-1deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-6px)
+            rotate(1deg);
+
+    }
+
+}
+
+
+/* =========================================
+   WAIT
+========================================= */
+
+.wait-screen {
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            #ffd9e9,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #c8ecff,
+            transparent 30%
+        ),
+
+        #fffbe5;
+
+}
+
+
+.wait-emoji {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation:
+        emojiShake 2s
+        infinite;
+
+}
+
+
+.wait-screen h1 {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 55px;
+
+    color: #e870a6;
+
+    margin-bottom: 15px;
+
+}
+
+
+.wait-screen p {
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #777;
+
+}
+
+
+.loading-heart {
+
+    font-size: 65px;
+
+    margin: 25px 0;
+
+    animation:
+        heartbeat 1.2s
+        infinite;
+
+}
+
+
+/* =========================================
+   SECOND SURPRISE
+========================================= */
+
+.second-screen {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #ffe1ee,
+            #d8f2ff
+        );
+
+}
+
+
+.second-stars {
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    animation:
+        sparkle 2s
+        infinite;
+
+}
+
+
+.final-heart {
+
+    font-size: 90px;
+
+    animation:
+        heartbeat 1.2s
+        infinite;
+
+}
+
+
+.second-screen h1 {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 45px;
+
+    color: #e66e9f;
+
+    margin: 10px 0 25px;
+
+}
+
+
+.second-card {
+
+    width: 100%;
+
+    max-width: 370px;
+
+    padding: 30px 24px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.08);
+
+    line-height: 1.8;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+
+    animation:
+        cardFloat 4s
+        infinite;
+
+}
+
+
+.second-card p {
+
+    margin-bottom: 18px;
+
+}
+
+
+.color-hearts {
+
+    font-size: 28px;
+
+    margin: 15px 0;
+
+    animation:
+        colorBounce 2s
+        infinite;
+
+}
+
+
+.special-line {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 23px;
+
+    color: #df72a2;
+
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final-screen {
+
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            #fff4b7,
+            transparent 25%
+        ),
+
+        linear-gradient(
+            145deg,
+            #ffd7e8,
+            #cdeeff
+        );
+
+}
+
+
+.final-stars {
+
+    font-size: 22px;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+    animation:
+        sparkle 2s
+        infinite;
+
+}
+
+
+.final-heart {
+
+    font-size: 85px;
+
+    animation:
+        heartbeat 1.2s
+        infinite;
+
+    margin-bottom: 15px;
+
+}
+
+
+.final-screen h1 {
+
+    max-width: 360px;
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 45px;
+
+    line-height: .9;
+
+    color: #e66d9f;
+
+    margin-bottom: 25px;
+
+    animation:
+        finalTitle 3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.final-screen h1 span {
+
+    color: #54afe4;
+
+}
+
+
+.final-colors {
+
+    font-size: 30px;
+
+    margin: 20px 0;
+
+    animation:
+        colorBounce 2s
+        infinite;
+
+}
+
+
+.final-message {
+
+    max-width: 330px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #655865;
+
+}
+
+
+.closing {
+
+    font-family:
+        "Baloo 2",
+        cursive;
+
+    font-size: 22px;
+
+    color: #df72a2;
+
+    margin-top: 25px;
+
+}
+
+
+.final-screen small {
+
+    max-width: 280px;
+
+    font-size: 9px;
+
+    color: #888;
+
+    margin-top: 30px;
+
+}
+
+
+/* =========================================
+   MUSIC BUTTON
+========================================= */
+
+.music-btn {
+
+    position: fixed;
+
+    right: 15px;
+
+    bottom: 15px;
+
+    width: 52px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.15);
+
+    z-index: 9999;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: none;
+
+    animation:
+        musicPulse 2s
+        infinite;
+
+}
+
+
+/* =========================================
+   CONTINUOUS DECORATION
+========================================= */
+
+.continuous-decoration {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    animation:
+        continuousFloat
+        8s
+        linear
+        forwards;
+
+}
+
+
+.continuous-sparkle {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    font-size: 18px;
+
+    animation:
+        sparkleLoop
+        2s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes continuousFloat {
+
+    0% {
+
+        transform:
+            translateY(0)
+            translateX(0)
+            rotate(0deg)
+            scale(.8);
+
+        opacity: 0;
+
+    }
+
+    10% {
+        opacity: .8;
+    }
+
+    50% {
+
+        transform:
+            translateY(-50vh)
+            translateX(25px)
+            rotate(180deg)
+            scale(1);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-115vh)
+            translateX(-30px)
+            rotate(360deg)
+            scale(.8);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes sparkleLoop {
+
+    0%, 100% {
+
+        transform:
+            scale(.7)
+            rotate(0deg);
+
+        opacity: .3;
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.3)
+            rotate(20deg);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes screenIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes giftFloat {
+
+    0%,100% {
+
+        transform:
+            translateY(0)
+            rotate(-2deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(3deg);
+
+    }
+
+}
+
+
+@keyframes textFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+@keyframes buttonFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+}
+
+
+@keyframes sparkle {
+
+    0%,100% {
+
+        opacity: .35;
+
+        transform:
+            scale(.95);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.08);
+
+    }
+
+}
+
+
+@keyframes bubbleMove {
+
+    0%,100% {
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate(30px,-25px)
+            scale(1.15);
+
+    }
+
+}
+
+
+@keyframes titleBounce {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+@keyframes titleFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+}
+
+
+@keyframes namePulse {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+}
+
+
+@keyframes cakeFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+@keyframes cakeWiggle {
+
+    0%,100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
+
+}
+
+
+@keyframes candleFlicker {
+
+    from {
+        transform:
+            translateX(-50%)
+            scale(.95);
+    }
+
+    to {
+        transform:
+            translateX(-50%)
+            scale(1.08);
+    }
+
+}
+
+
+@keyframes candleFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+@keyframes cardFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+@keyframes envelopeFloat {
+
+    0%,100% {
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            rotate(3deg);
+
+    }
+
+}
+
+
+@keyframes letterFloat {
+
+    0%,100% {
+
+        transform:
+            rotate(-.5deg)
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            rotate(.5deg)
+            translateY(-5px);
+
+    }
+
+}
+
+
+@keyframes emojiShake {
+
+    0%,80%,100% {
+        transform: rotate(0);
+    }
+
+    85% {
+        transform: rotate(-8deg);
+    }
+
+    90% {
+        transform: rotate(8deg);
+    }
+
+    95% {
+        transform: rotate(-5deg);
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.13);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes finalTitle {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+@keyframes colorBounce {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+@keyframes musicPulse {
+
+    0%,100% {
+
+        box-shadow:
+            0 8px 25px
+            rgba(0,0,0,.15);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 8px 30px
+            rgba(235,110,160,.4);
+
+    }
+
+}
+
+
+@keyframes fadePulse {
+
+    0%,100% {
+        opacity: .4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================
+   PHONE OPTIMIZATION
+========================================= */
+
+@media(max-width:360px) {
+
+    .opening-screen h1 {
+        font-size: 38px;
+    }
+
+    .surprise-screen h1 {
+        font-size: 56px;
+    }
+
+    .surprise-screen h2 {
+        font-size: 36px;
+    }
+
+    .letter {
+        padding: 30px 20px;
+    }
+
+    .final-screen h1 {
+        font-size: 40px;
+    }
+
+}
